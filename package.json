@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "deploy": "npm run build & now -f"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ],
+  "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
+    "autoprefixer": "^9.6.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "parcel-bundler": "^1.12.3",
+    "tailwindcss": "^1.1.2",
+    "tailwindcss-filters": "^2.0.0",
+    "tailwindcss-transforms": "^2.2.0",
+    "tailwindcss-transitions": "^2.0.1",
+    "typescript": "^3.6.3"
+  }
+}

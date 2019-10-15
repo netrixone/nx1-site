@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "nx1",
+  "scope": "f3l1x",
+  "alias": ["nx1.now.sh"],
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/dist/$1" }
+  ]
+}
