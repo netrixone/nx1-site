@@ -3,6 +3,16 @@ const _ = require("lodash");
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ["Roboto Mono", "monospace"],
+        arvo: ["Arvo", "serif"]
+      },
+      fontSize: {
+        base: "1rem",
+        lg: "1.375rem",
+        xl: "1.5rem",
+        "2xl": "2.5rem"
+      },
       borderWidth: theme => ({
         "8": "2rem",
         "10": "2.5rem",
@@ -45,10 +55,6 @@ module.exports = {
         "screen-20": "20vw",
         "screen-18": "18vw"
       }),
-      fontFamily: {
-        roboto: ["Roboto"],
-        arvo: ["Arvo"]
-      },
       width: {
         double: "200%"
       },
