@@ -8,6 +8,7 @@ module.exports = {
         arvo: ["Arvo", "serif"]
       },
       fontSize: {
+        tiny: "15px",
         base: "1rem",
         lg: "1.375rem",
         xl: "1.5rem",
@@ -119,6 +120,9 @@ module.exports = {
         "96": "24rem",
         "128": "32rem",
         "screen-1/2": "50vh"
+      }),
+      maxWidth: theme => ({
+        "4xl": "52.5rem"
       })
     },
     minWidth: theme => ({
