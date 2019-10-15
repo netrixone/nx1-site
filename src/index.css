@@ -1,3 +1,20 @@
 @tailwind base;
+
+@font-face {
+  font-family: Arvo;
+  font-weight: 700;
+  src: url(/fonts/Arvo-Bold.ttf) format("ttf");
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: 700;
+  src: url(/fonts/RobotoMono-Bold.ttf) format("ttf");
+}
+@font-face {
+  font-family: Roboto;
+  font-weight: 400;
+  src: url(/fonts/RobotoMono-Regular.ttf) format("ttf");
+}
+
 @tailwind components;
 @tailwind utilities;

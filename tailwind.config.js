@@ -45,6 +45,10 @@ module.exports = {
         "screen-20": "20vw",
         "screen-18": "18vw"
       }),
+      fontFamily: {
+        roboto: ["Roboto"],
+        arvo: ["Arvo"]
+      },
       width: {
         double: "200%"
       },

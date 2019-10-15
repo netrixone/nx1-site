@@ -1,10 +1,18 @@
 const tailwindcss = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
-const purgecss = require("@fullhuman/postcss-purgecss")({
-  content: ["./src/**/*.*"],
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-});
+const purgecss = require("@fullhuman/postcss-purgecss");
+const postcssPlugins = [tailwindcss];
+
+if (process.env.NODE_ENV === "production") {
+  postcssPlugins.push(
+    purgecss({
+      content: ["./src/**/*.*"],
+      defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+    })
+  );
+  postcssPlugins.push(autoprefixer);
+}
 
 module.exports = {
-  plugins: [tailwindcss("./tailwind.config.js"), purgecss, autoprefixer]
+  plugins: [tailwindcss("./tailwind.config.js"), ...postcssPlugins]
 };
