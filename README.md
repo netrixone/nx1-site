@@ -1,4 +1,4 @@
-# NX1
+# NX1 site
 
 ## Usage
 

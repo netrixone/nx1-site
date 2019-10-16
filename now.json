@@ -1,8 +1,8 @@
 {
   "version": 2,
   "name": "nx1",
-  "scope": "f3l1x",
-  "alias": ["nx1.now.sh"],
+  "scope": "milansulc",
+  "alias": ["netrixone.now.sh"],
   "builds": [
     { "src": "package.json", "use": "@now/static-build" }
   ],
