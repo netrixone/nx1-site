@@ -2,6 +2,15 @@ const _ = require("lodash");
 
 module.exports = {
   theme: {
+    container: {
+      center: true
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px"
+    },
     extend: {
       fontFamily: {
         roboto: ["Roboto Mono", "monospace"],
@@ -28,6 +37,9 @@ module.exports = {
         "32": "8rem",
         "36": "9rem",
         "40": "10rem",
+        "44": "11rem",
+        "48": "12rem",
+        "52": "13rem",
         "56": "14rem",
         "60": "15rem",
         "72": "18rem",
