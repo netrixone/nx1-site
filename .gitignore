@@ -1,5 +1,11 @@
-.cache/
-node_modules/
-dist/
+# IDE
+.DS_Store
 
-/.DS_Store
+# Parcel
+/.cache/
+
+# NPM
+/node_modules
+
+# App
+/dist
