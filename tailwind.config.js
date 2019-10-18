@@ -74,9 +74,6 @@ module.exports = {
       width: {
         double: "200%"
       },
-      spacing: {
-        screen: "100vh"
-      },
       inset: theme => ({
         ...theme("spacing"),
         ...theme("width")
@@ -121,9 +118,11 @@ module.exports = {
         }
       },
       spacing: {
+        "9": "2.25rem",
         "72": "18rem",
         "96": "24rem",
-        "128": "32rem"
+        "128": "32rem",
+        screen: "100vh"
       },
       minHeight: theme => ({
         "0": "0",
@@ -138,12 +137,19 @@ module.exports = {
       }),
       maxWidth: theme => ({
         "4xl": "52.5rem"
-      })
+      }),
+      borderRadius: {
+        lg: "21px"
+      }
     },
     minWidth: theme => ({
       ...theme("spacing"),
       ...theme("width")
     }),
+    transform: {
+      "y-x": "translateY(50%) translateX(-50%)",
+      "-y-x": "translateY(-50%) translateX(-50%)"
+    },
     transformOrigin: {
       // defaults to these values
       t: "top",
