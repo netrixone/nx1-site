@@ -27,4 +27,11 @@
   @apply absolute -ml-4 text-blue-500;
 }
 
+.glide-slide {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  touch-action: pan-y;
+  user-select: none;
+}
+
 @tailwind utilities;
