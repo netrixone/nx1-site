@@ -17,4 +17,9 @@
 }
 
 @tailwind components;
+
+.gradient-fade {
+  background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));
+}
+
 @tailwind utilities;

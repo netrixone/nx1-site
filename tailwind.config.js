@@ -9,7 +9,7 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1280px"
+      xl: "1200px"
     },
     extend: {
       fontFamily: {
@@ -119,6 +119,7 @@ module.exports = {
       },
       spacing: {
         "9": "2.25rem",
+        "18": "4.5rem",
         "72": "18rem",
         "96": "24rem",
         "128": "32rem",
