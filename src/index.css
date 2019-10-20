@@ -22,4 +22,9 @@
   background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));
 }
 
+.list li:before {
+  content: "\2014";
+  @apply absolute -ml-4 text-blue-500;
+}
+
 @tailwind utilities;
