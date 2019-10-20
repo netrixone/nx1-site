@@ -1,24 +1,25 @@
-const targets = document.querySelectorAll("img");
+const targets = Array.from(document.querySelectorAll("[data-observe]"));
 
 const lazyLoad = target => {
-  const io = new IntersectionObserver((entries, observer) => {
-    console.log(entries);
-    entries.forEach(entry => {
-      console.log("😍");
+  const io = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const classe = target.getAttribute("data-classes").split(" ");
+          target.classList.remove(...classe);
 
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        const src = img.getAttribute("data-src");
-
-        img.setAttribute("src", src);
-
-        observer.disconnect();
-      }
-    });
-  });
+          observer.disconnect();
+        }
+      });
+    },
+    {
+      rootMargin: "-100px",
+      threshold: 0
+    }
+  );
 
   io.observe(target);
 };
 
-//todo disable parce hash images
-//targets.forEach(lazyLoad);
+targets.forEach(lazyLoad);
