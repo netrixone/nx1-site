@@ -11,7 +11,7 @@
 	</head>
 	<body class="font-roboto text-base">
 		<header
-			class="py-32 px-8 relative flex flex-col items-center justify-center bg-black text-white text-center overflow-hidden"
+			class="pt-12 pb-20 lg:py-32 px-8 relative flex flex-col items-center justify-center bg-black text-white text-center overflow-hidden"
 		>
 			<!-- todo danek ikony -->
 			<svg
@@ -180,9 +180,9 @@
 				</p>
 			</div>
 			<div
-				class="md:px-10 relative flex flex-col md:flex-row w-full lg:w-auto"
+				class="container relative flex flex-col md:flex-row w-full lg:w-auto"
 			>
-				<div class="mb-4 px-8 lg:pl-0 relative lg:w-1/2">
+				<div class="mb-4 px-8 lg:pl-0 relative md:w-1/2">
 					<a
 						href="#"
 						class="px-4 lg:px-8 py-3 lg:py-2 w-full relative inline-flex bg-black justify-center border-2 border-blue-500 text-blue-500 hover:text-blue-700 hover:border-blue-700 transition-all rounded-full font-weight min-w-40 z-20 whitespace-no-wrap"
@@ -192,10 +192,10 @@
 						class="absolute border border-blue-500 left-0 top-1/2 lg:left-auto lg:right-0 -translate-y-1/2 w-20"
 					></div>
 					<div
-						class="absolute border border-blue-500 left-0 top-1/2 lg:left-auto lg:right-0 h-40"
+						class="absolute border border-blue-500 left-0 top-1/2 lg:left-auto lg:right-0 h-128"
 					></div>
 				</div>
-				<div class="px-8 lg:pr-0 lg:w-1/2">
+				<div class="px-8 lg:pr-0 md:w-1/2">
 					<a
 						href="#"
 						class="px-4 lg:px-8 py-3 lg:py-2 w-full relative inline-flex bg-black justify-center border-2 border-pink-500 text-pink-500 hover:text-pink-700 hover:border-pink-700 transition-all rounded-full font-weight min-w-40 z-20 whitespace-no-wrap"
@@ -206,22 +206,22 @@
 
 			<div class="absolute bottom-0 w-full lg:h-64">
 				<div
-					class="absolute bottom-0 w-0 right-0 border-b-gray-700 border-transparent border-r-transparent border-b-32 border-l-screen-27"
+					class="absolute bottom-0 w-0 right-0 border-b-gray-700 border-transparent border-r-transparent border-b-10 lg:border-b-32 border-l-screen-30 lg:border-l-screen-27"
 				></div>
 				<div
-					class="absolute bottom-0 w-0 border-b-gray-700 border-transparent border-r-transparent border-b-32 border-r-screen lg:border-r-screen-90"
+					class="absolute bottom-0 w-0 right-0 border-b-gray-900 border-transparent border-r-transparent border-b-8 lg:border-b-32 border-l-screen-24 z-20"
 				></div>
 				<div
-					class="absolute bottom-0 w-0 right-0 border-b-gray-900 border-transparent border-r-transparent border-b-32 border-l-screen-24 z-20"
+					class="absolute bottom-0 w-0 border-b-gray-700 border-transparent border-r-transparent border-b-14 lg:border-b-32 border-r-screen lg:border-r-screen-90"
 				></div>
 				<div
-					class="absolute bottom-0 w-0 border-b-gray-900 border-transparent border-r-transparent border-b-20 border-r-screen-85 z-20"
+					class="absolute bottom-0 w-0 border-b-gray-900 border-transparent border-r-transparent border-b-10 lg:border-b-20 border-r-screen-83 lg:border-r-screen-85 z-20"
 				></div>
 			</div>
 		</header>
 		<section class="px-8 pt-12 pb-20 bg-gray-900 relative overflow-hidden">
 			<h2
-				class="mb-16 mx-auto uppercase font-lg text-white font-bold font-arvo text-xl text-center"
+				class="mb-16 mx-auto uppercase text-white font-bold font-arvo text-base md:text-lg lg:text-xl text-center"
 			>
 				What we can offer specifically
 			</h2>
@@ -241,11 +241,13 @@
 							data-classes="lg:opacity-0 lg:translate-x-100"
 						>
 							<h3
-								class="mb-4 font-arvo text-lg text-blue-500 uppercase font-bold"
+								class="mb-4 font-arvo text:base lg:text-lg text-blue-500 uppercase font-bold"
 							>
 								Consulting
 							</h3>
-							<ul class="ml-4 list text-tiny text-gray-100">
+							<ul
+								class="ml-4 list text-sm lg:text-tiny text-gray-100"
+							>
 								<li class="mb-4 relative">
 									developer-focused, solve real-world,
 									everyday problems
@@ -296,11 +298,13 @@
 							data-classes="lg:opacity-0 lg:-translate-x-100"
 						>
 							<h3
-								class="mb-4 font-arvo text-lg text-blue-500 uppercase font-bold lg:text-right"
+								class="mb-4 font-arvo text:base lg:text-lg text-blue-500 uppercase font-bold lg:text-right"
 							>
 								Development
 							</h3>
-							<ul class="ml-4 list text-tiny text-gray-100">
+							<ul
+								class="ml-4 list text-sm lg:text-tiny text-gray-100"
+							>
 								<li class="mb-4 relative">
 									complex data processing (like maintaining a
 									huge GeoIP database with historical data and
@@ -333,11 +337,13 @@
 							data-classes="lg:opacity-0 lg:translate-x-100"
 						>
 							<h3
-								class="mb-4 font-arvo text-lg text-blue-500 uppercase font-bold"
+								class="mb-4 font-arvo text:base lg:text-lg text-blue-500 uppercase font-bold"
 							>
 								Testing
 							</h3>
-							<ul class="ml-4 list text-tiny text-gray-100">
+							<ul
+								class="ml-4 list text-sm lg:text-tiny text-gray-100"
+							>
 								<li class="mb-4 relative">
 									performance testing (on-demand tests are
 									great, but we recommend regular checks with
@@ -362,11 +368,13 @@
 							data-classes="lg:opacity-0 lg:-translate-x-100"
 						>
 							<h3
-								class="mb-4 font-arvo text-lg text-blue-500 uppercase font-bold lg:text-right"
+								class="mb-4 font-arvo text:base lg:text-lg text-blue-500 uppercase font-bold lg:text-right"
 							>
 								Training
 							</h3>
-							<ul class="ml-4 list text-tiny text-gray-100">
+							<ul
+								class="ml-4 list text-sm lg:text-tiny text-gray-100"
+							>
 								<li class="mb-4 relative">programming</li>
 								<li class="mb-4 relative">
 									PHP: how to design complex application
@@ -412,13 +420,13 @@
 
 			<div class="absolute bottom-0 left-0 right-0 w-full">
 				<div
-					class="absolute bottom-0 w-0 border-b-blue-500 border-transparent border-r-transparent border-b-8 border-r-screen z-10"
+					class="absolute bottom-0 w-0 border-b-blue-500 border-transparent border-r-transparent border-b-6 lg:border-b-8 border-r-screen-110 lg:border-r-screen z-10"
 				></div>
 				<div
 					class="absolute bottom-0 w-0 border-b-blue-500 border-transparent border-l-transparent border-b-8 border-l-screen z-10"
 				></div>
 				<div
-					class="absolute bottom-0 w-0 h-0 border-transparent border-l-screen-75 border-r-screen-25 border-b-12 border-t-0 border-b-white z-20"
+					class="absolute bottom-0 w-0 h-0 border-transparent border-l-screen-75 border-r-screen-25 border-b-8 lg:border-b-12 border-t-0 border-b-white z-20"
 				></div>
 			</div>
 		</section>
@@ -538,17 +546,17 @@
 		</section>
 
 		<section
-			class="px-8 pt-32 md:pt-48 pb-32 bg-black relative overflow-hidden"
+			class="px-8 pt-24 lg:pt-48 pb-24 lg:pb-32 bg-black relative overflow-hidden"
 		>
 			<div class="absolute w-full right-0 left-0 top-0 z-50">
 				<div
-					class="absolute top-0 w-0 border-t-white border-transparent border-r-transparent border-t-10 border-r-screen-20 z-20"
+					class="absolute top-0 w-0 border-t-white border-transparent border-r-transparent border-t-6 lg:border-t-10 border-r-screen-20 z-20"
 				></div>
 				<div
-					class="absolute top-0 w-0 right-0 border-t-white border-transparent border-l-transparent border-t-10 border-l-screen-80 z-20"
+					class="absolute top-0 w-0 right-0 border-t-white border-transparent border-l-transparent border-t-6 lg:border-t-10 border-l-screen-80 z-20"
 				></div>
 				<div
-					class="absolute top-0 w-0 right-0 border-t-blue-500 border-transparent border-l-transparent border-t-20 border-l-screen z-10"
+					class="absolute top-0 w-0 right-0 border-t-blue-500 border-transparent border-l-transparent border-t-14 lg:border-t-20 border-l-screen z-10"
 				></div>
 			</div>
 
@@ -896,10 +904,10 @@
 
 			<div class="absolute w-full left-0 right-0 bottom-0 z-50">
 				<div
-					class="absolute bottom-0 w-0 border-b-gray-900 border-transparent border-r-transparent border-b-10 border-r-screen-85 z-20"
+					class="absolute bottom-0 w-0 border-b-gray-900 border-transparent border-r-transparent border-b-6 lg:border-b-10 border-r-screen-85 z-20"
 				></div>
 				<div
-					class="absolute bottom-0 w-0 right-0 border-b-gray-900 border-transparent border-l-transparent border-b-20 border-l-screen-20 z-20"
+					class="absolute bottom-0 w-0 right-0 border-b-gray-900 border-transparent border-l-transparent border-b-8 lg:border-b-20 border-l-screen-30 lg:border-l-screen-20 z-20"
 				></div>
 			</div>
 		</section>
@@ -1059,38 +1067,38 @@
 		</section>
 
 		<section
-			class="pt-40 lg:pt-64 pb-32 px-8 pb-64 relative bg-black overflow-hidden"
+			class="pt-32 lg:pt-40 lg:pt-64 pb-20 px-8 lg:pb-64 relative bg-black overflow-hidden"
 		>
 			<div class="absolute left-0 right-0 top-0">
 				<div
-					class="absolute top-0 w-0 border-t-gray-800 border-transparent border-r-transparent border-t-20 border-r-screen z-10"
+					class="absolute top-0 w-0 border-t-gray-800 border-transparent border-r-transparent border-t-10 lg:border-t-20 border-r-screen z-10"
 				></div>
 				<div
-					class="absolute top-0 w-0 right-0 border-t-gray-800 border-transparent border-l-transparent border-t-24 border-l-screen-45 z-10"
+					class="absolute top-0 w-0 border-t-gray-900 border-transparent border-r-transparent border-t-6 lg:border-t-10 border-r-screen-85 z-20"
 				></div>
 
 				<div
-					class="absolute top-0 w-0 border-t-gray-900 border-transparent border-r-transparent border-t-10 border-r-screen-85 z-20"
+					class="absolute top-0 w-0 right-0 border-t-gray-800 border-transparent border-l-transparent border-t-16 lg:border-t-24 border-l-screen lg:border-l-screen-45 z-10"
 				></div>
 				<div
-					class="absolute top-0 w-0 right-0 border-t-gray-900 border-transparent border-l-transparent border-t-24 border-l-screen-35 z-20"
+					class="absolute top-0 w-0 right-0 border-t-gray-900 border-transparent border-l-transparent border-t-16 lg:border-t-24 border-l-screen-80 lg:border-l-screen-35 z-20"
 				></div>
 			</div>
 			<div class="container">
 				<div
-					class="absolute top-0 lg:left-1/2 lg:-translate-x-1/2 border border-pink-500 h-40"
+					class="absolute top-0 lg:left-1/2 lg:-translate-x-1/2 border border-pink-500 h-32 lg:h-40"
 				>
 					<div
 						class="absolute top-full left-1/2 w-6 h-6 lg:w-8 lg:h-8 border-pink-500 border-2 rounded-full bg-black -translate-x-1/2"
 					></div>
 				</div>
 				<h2
-					class="mb-8 px-6 text-white uppercase text-base lg:text-xl lg:text-center font-bold font-arvo"
+					class="mb-8 px-6 lg:px-0 text-white uppercase text-base lg:text-xl lg:text-center font-bold font-arvo"
 				>
 					From our blog
 				</h2>
-				<div class="-ml-2 -mr-2 px-6 flex flex-wrap">
-					<article class="mb-6 lg:mb-4 pl-2 pr-2 w-full lg:w-1/3">
+				<div class="-mx-12 px-6 lg:px-0 flex flex-wrap">
+					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/3">
 						<h3
 							class="mb-4 uppercase text-base lg:text-lg font-arvo font-bold"
 						>
@@ -1101,7 +1109,7 @@
 							>
 						</h3>
 						<p
-							class="mb-2 lg:mb-4 xl:pr-32 text-sm lg:text-tiny text-gray-100"
+							class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-100"
 						>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Nullam fringilla tempus ullamcorper. Donec
@@ -1114,7 +1122,7 @@
 							>Read more</a
 						>
 					</article>
-					<article class="mb-6 lg:mb-4 pl-2 pr-2 w-full lg:w-1/3">
+					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/3">
 						<h3
 							class="mb-4 text-pink-500 uppercase text-base lg:text-lg font-arvo font-bold"
 						>
@@ -1125,7 +1133,7 @@
 							>
 						</h3>
 						<p
-							class="mb-2 lg:mb-4 xl:pr-32 text-sm lg:text-tiny text-gray-100"
+							class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-100"
 						>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Nullam fringilla tempus ullamcorper. Donec
@@ -1138,7 +1146,7 @@
 							>Read more</a
 						>
 					</article>
-					<article class="mb-6 lg:mb-4 pl-2 pr-2 w-full lg:w-1/3">
+					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/3">
 						<h3
 							class="mb-4 text-pink-500 uppercase text-base lg:text-lg font-arvo font-bold"
 						>
@@ -1149,7 +1157,7 @@
 							>
 						</h3>
 						<p
-							class="mb-2 lg:mb-4 xl:pr-32 text-sm lg:text-tiny text-gray-100"
+							class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-100"
 						>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit. Nullam fringilla tempus ullamcorper. Donec
@@ -1167,16 +1175,16 @@
 
 			<div class="absolute left-0 right-0 bottom-0">
 				<div
-					class="absolute bottom-0 w-0 border-b-gray-800 border-transparent border-r-transparent border-b-20 border-r-screen-30 z-10"
+					class="absolute bottom-0 w-0 border-b-gray-800 border-transparent border-r-transparent border-b-14 lg:border-b-20 border-r-screen-60 lg:border-r-screen-30 z-10"
 				></div>
 				<div
-					class="absolute bottom-0 w-0 right-0 border-b-gray-800 border-transparent border-l-transparent border-b-52 border-l-screen z-10"
+					class="absolute bottom-0 w-0 right-0 border-b-gray-800 border-transparent border-l-transparent border-b-28 lg:border-b-52 border-l-screen-110 lg:border-l-screen z-10"
 				></div>
 				<div
-					class="absolute bottom-0 w-0 border-b-gray-900 border-transparent border-r-transparent border-b-20 border-r-screen-18 z-20"
+					class="absolute bottom-0 w-0 border-b-gray-900 border-transparent border-r-transparent border-b-8 lg:border-b-20 border-r-screen-26 lg:border-r-screen-18 z-20"
 				></div>
 				<div
-					class="absolute bottom-0 w-0 right-0 border-b-gray-900 border-transparent border-l-transparent border-b-18 border-l-screen-90 z-20"
+					class="absolute bottom-0 w-0 right-0 border-b-gray-900 border-transparent border-l-transparent border-b-14 lg:border-b-18 border-l-screen border-l-screen-90 z-20"
 				></div>
 			</div>
 		</section>
