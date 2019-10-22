@@ -136,12 +136,16 @@ module.exports = {
         "128": "32rem"
       }),
       maxHeight: theme => ({
+        ...theme("spacing"),
+        ...theme("width"),
         "0": "0",
         "96": "24rem",
         "128": "32rem",
         "screen-1/2": "50vh"
       }),
       maxWidth: theme => ({
+        ...theme("spacing"),
+        ...theme("width"),
         "4xl": "52.5rem"
       }),
       borderRadius: {

@@ -21,6 +21,6 @@
     "typescript": "^3.6.4"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.4.1"
+    "swiper": "^5.1.0"
   }
 }

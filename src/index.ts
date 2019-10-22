@@ -1,4 +1,4 @@
-import Glide from "@glidejs/glide";
+import Swiper from "swiper";
 
 const timeline = Array.from(document.querySelectorAll("[data-observe]"));
 const sliders = Array.from(document.querySelectorAll("[data-slider]"));
@@ -30,20 +30,38 @@ function appendClasses(entry) {
 }
 
 function initCarousel(entry) {
-  const glide = new Glide(entry.target, {
-    type: "carousel",
-    perView: 8,
-    autoplay: 1,
-    animationDuration: 3000,
-    startAt: 0,
-    animationTimingFunc: "linear"
-  });
+  const slider = entry.target;
+  const sliderId = slider.getAttribute("data-slider");
+  const prev = document.querySelector(`[data-slide-prev="${sliderId}"]`);
+  const next = document.querySelector(`[data-slide-next="${sliderId}"]`);
 
-  glide.on("mount.before", () => {
-    console.log("asdfas");
-  });
+  console.log(prev);
 
-  glide.mount();
+  const swiper = new Swiper(entry.target, {
+    slidesPerView: 2,
+    navigation: {
+      nextEl: next,
+      prevEl: prev,
+      disabledClass: "slide-disabled"
+    },
+    breakpoints: {
+      480: {
+        slidesPerView: 3
+      },
+      640: {
+        slidesPerView: 4
+      },
+      768: {
+        slidesPerView: 5
+      },
+      1024: {
+        slidesPerView: 6
+      },
+      1200: {
+        slidesPerView: 8
+      }
+    }
+  });
 }
 
 timeline.forEach(e => lazyLoad(e, appendClasses));
