@@ -3,17 +3,20 @@
 @font-face {
   font-family: Arvo;
   font-weight: 700;
-  src: url(./fonts/Arvo-Bold.ttf) format("ttf");
+  src: url("./fonts/arvo-bold.woff2") format("woff2"),
+    url("./fonts/arvo-bold.woff") format("woff");
 }
 @font-face {
   font-family: Roboto Mono;
   font-weight: 700;
-  src: url(./fonts/RobotoMono-Bold.ttf) format("ttf");
+  src: url("./fonts/robotomono-bold.woff2") format("woff2"),
+    url("./fonts/robotomono-bold.woff") format("woff");
 }
 @font-face {
   font-family: Roboto Mono;
   font-weight: 400;
-  src: url(./fonts/RobotoMono-Regular.ttf) format("ttf");
+  src: url("./fonts/robotomono-bold.woff2") format("woff2"),
+    url("./fonts/robotomono-regular.woff") format("woff");
 }
 
 @tailwind components;
