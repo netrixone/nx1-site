@@ -86,6 +86,10 @@
   }
 }
 
+.transform-reset-3d {
+  transform: translate3d(0, 0, 0);
+}
+
 .animation-200 {
   animation-duration: 200s;
 }
