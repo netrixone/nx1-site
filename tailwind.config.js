@@ -134,6 +134,7 @@ module.exports = {
         "0": "0",
         "96": "24rem",
         "128": "32rem",
+        "216": "54rem",
         "screen-90": "90vh"
       }),
       maxHeight: theme => ({
@@ -142,6 +143,7 @@ module.exports = {
         "0": "0",
         "96": "24rem",
         "128": "32rem",
+        "screen-90": "90vh",
         "screen-1/2": "50vh"
       }),
       maxWidth: theme => ({
