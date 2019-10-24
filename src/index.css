@@ -52,3 +52,100 @@
     background: linear-gradient(to top, #000000 50%, rgba(0, 0, 0, 0));
   }
 }
+
+@keyframes rotate-0 {
+  from {
+    @apply rotate-0;
+  }
+  to {
+    @apply rotate-360;
+  }
+}
+
+@keyframes rotate-15 {
+  from {
+    @apply rotate-15;
+  }
+  to {
+    @apply rotate-375;
+  }
+}
+
+@keyframes rotate-random {
+  0% {
+    @apply rotate-0;
+  }
+  25% {
+    @apply rotate-75;
+  }
+  50% {
+    @apply rotate-160;
+  }
+  100% {
+    @apply rotate-360;
+  }
+}
+
+.animation-200 {
+  animation-duration: 200s;
+}
+
+.animation-250 {
+  animation-duration: 250s;
+}
+
+.animation-300 {
+  animation-duration: 300s;
+}
+
+.animation-350 {
+  animation-duration: 350s;
+}
+
+.animation-400 {
+  animation-duration: 400s;
+}
+
+.animation-duration-long {
+  animation-duration: 650s;
+}
+
+.animation-duration-long-2 {
+  animation-duration: 750s;
+}
+
+.animation-duration-long-3 {
+  animation-duration: 850s;
+}
+
+.animatino-duration-short {
+  animation-duration: 35000ms;
+}
+
+.animation-direction-normal  {
+  animation-direction: normal;
+}
+
+.animation-direction-reverse  {
+  animation-direction: reverse;
+}
+
+.animation-iteration-infinite {
+  animation-iteration-count: infinite;
+}
+
+.animation-rotate-0 {
+  animation-name: rotate-0;
+}
+
+.animation-rotate-15 {
+  animation-name: rotate-15;
+}
+
+.animation-rotate-reverse {
+  animation-name: rotate-reverse;
+}
+
+.animation-timing-linear {
+  animation-timing-function: linear;
+}

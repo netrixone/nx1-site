@@ -133,7 +133,8 @@ module.exports = {
       minHeight: theme => ({
         "0": "0",
         "96": "24rem",
-        "128": "32rem"
+        "128": "32rem",
+        "screen-90": "90vh"
       }),
       maxHeight: theme => ({
         ...theme("spacing"),
@@ -169,7 +170,8 @@ module.exports = {
       b: "bottom",
       bl: "bottom left",
       l: "left",
-      tl: "top left"
+      tl: "top left",
+      cc: "center center"
     },
     translate: {
       "1/2": "50%",
@@ -180,6 +182,7 @@ module.exports = {
       "-100": "-100px"
     },
     rotate: {
+      "0": "0deg",
       "5": "5deg",
       "10": "10deg",
       "12": "12deg",
@@ -210,7 +213,9 @@ module.exports = {
       "170": "170deg",
       "175": "175deg",
       "180": "180deg",
-      "270": "270deg"
+      "270": "270deg",
+      "360": "360deg",
+      "375": "375deg"
     },
     scale: {
       // defaults to {}
