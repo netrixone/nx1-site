@@ -55,10 +55,10 @@
 
 @keyframes rotate-0 {
   from {
-    @apply rotate-0;
+    transform: rotate3d(0, 0, 1, 0);
   }
   to {
-    @apply rotate-360;
+    transform: rotate3d(0, 0, 1, 360deg);
   }
 }
 
@@ -139,6 +139,8 @@
 }
 
 .animation-rotate-0 {
+  backface-visibility: hidden;
+  perspective: 1000;
   will-change: transform;
   animation-name: rotate-0;
 }
