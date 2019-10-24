@@ -111,15 +111,15 @@
 }
 
 .animation-duration-long {
-  animation-duration: 800s;
-}
-
-.animation-duration-long-2 {
   animation-duration: 900s;
 }
 
-.animation-duration-long-3 {
+.animation-duration-long-2 {
   animation-duration: 1000s;
+}
+
+.animation-duration-long-3 {
+  animation-duration: 1100s;
 }
 
 .animatino-duration-short {
@@ -139,6 +139,7 @@
 }
 
 .animation-rotate-0 {
+  will-change: transform;
   animation-name: rotate-0;
 }
 
