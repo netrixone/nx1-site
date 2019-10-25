@@ -9,7 +9,9 @@ module.exports = {
       sm: "640px",
       md: "768px",
       lg: "1024px",
-      xl: "1200px"
+      xl: "1200px",
+      "2xl": "1400px",
+      "5xl": "2000px"
     },
     extend: {
       fontFamily: {
@@ -143,6 +145,7 @@ module.exports = {
         "0": "0",
         "96": "24rem",
         "128": "32rem",
+        "240": "60rem",
         "screen-90": "90vh",
         "screen-1/2": "50vh"
       }),
