@@ -2,7 +2,7 @@
   "version": 2,
   "name": "nx1",
   "scope": "nx1",
-  "alias": ["netrixone.cz", "netrixone.now.sh"],
+  "alias": ["netrixone.cz", "nx1.now.sh", "netrixone.now.sh"],
   "builds": [
     { "src": "package.json", "use": "@now/static-build" }
   ],
