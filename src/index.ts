@@ -91,6 +91,7 @@ import Swiper from "swiper";
 
 const timeline = Array.from(document.querySelectorAll("[data-observe]"));
 const sliders = Array.from(document.querySelectorAll("[data-slider]"));
+const smoothScroll = Array.from(document.querySelectorAll("[data-smooth-scroll]"));
 
 const lazyLoad = (target, cb, config = {}) => {
   const io = new IntersectionObserver(
@@ -152,3 +153,12 @@ function initCarousel(entry) {
 
 timeline.forEach(e => lazyLoad(e, appendClasses));
 sliders.forEach(e => lazyLoad(e, initCarousel, { rootMargin: "100px" }));
+
+smoothScroll.forEach(e => {
+  e.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.getElementById(e.getAttribute('href').substr(1)).scrollIntoView({
+      behavior: "smooth",
+    })
+  })
+});
