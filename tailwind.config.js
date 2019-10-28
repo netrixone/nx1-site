@@ -279,6 +279,7 @@ module.exports = {
     })
   },
   variants: {
+    display: ["responsive", "hover", "focus", "dark"],
     backgroundColor: ["dark", "responsive", "hover", "group-hover"],
     inset: ["responsive"],
     translate: ["responsive"],
