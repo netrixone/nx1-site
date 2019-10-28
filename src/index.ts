@@ -7,15 +7,20 @@ smoothScrollPolyfill.polyfill();
 
 const timeline = Array.from(document.querySelectorAll("[data-observe]"));
 const sliders = Array.from(document.querySelectorAll("[data-slider]"));
-const smoothScroll = Array.from(document.querySelectorAll("[data-smooth-scroll]"));
+const smoothScroll = Array.from(
+  document.querySelectorAll("[data-smooth-scroll]")
+);
 const htmlElement = document.getElementsByTagName("html")[0];
-const darkModeSwitcher = Array.from(document.querySelectorAll("[data-toggle-dark-mode]"));
+const darkModeSwitcher = Array.from(
+  document.querySelectorAll("[data-toggle-dark-mode]")
+);
 const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches;
-const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches;
+const isNotSpecified = window.matchMedia(
+  "(prefers-color-scheme: no-preference)"
+).matches;
 const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
 let hasSchemeStored = sessionStorage.getItem("darkModeStored");
-
 
 const lazyLoad = (target, cb, config = {}) => {
   const io = new IntersectionObserver(
@@ -23,7 +28,7 @@ const lazyLoad = (target, cb, config = {}) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           cb(entry);
-          observer.disconnect();∂
+          observer.disconnect();
         }
       });
     },
@@ -76,13 +81,14 @@ function initCarousel(entry) {
 }
 
 function switchDarkMode(element) {
-  let darkColorScheme = hasSchemeStored !== null ? hasSchemeStored == "true" : isDarkMode;
-  element.addEventListener("click", (event) => {
+  let darkColorScheme =
+    hasSchemeStored !== null ? hasSchemeStored == "true" : isDarkMode;
+  element.addEventListener("click", event => {
     event.preventDefault();
     darkColorScheme = !darkColorScheme;
     sessionStorage.setItem("darkModeStored", darkColorScheme.toString());
     toggleBodyDarkMode(darkColorScheme);
-  })
+  });
 }
 
 function toggleBodyDarkMode(toggle = false): void {
@@ -90,14 +96,18 @@ function toggleBodyDarkMode(toggle = false): void {
 }
 
 function setColorScheme() {
-  if(hasSchemeStored !== null) {
+  if (hasSchemeStored !== null) {
     toggleBodyDarkMode(hasSchemeStored == "true");
   } else {
-    window.matchMedia("(prefers-color-scheme: dark)").addListener(e => e.matches && toggleBodyDarkMode(true))
-    window.matchMedia("(prefers-color-scheme: light)").addListener(e => e.matches && toggleBodyDarkMode(false))
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addListener(e => e.matches && toggleBodyDarkMode(true));
+    window
+      .matchMedia("(prefers-color-scheme: light)")
+      .addListener(e => e.matches && toggleBodyDarkMode(false));
 
-    toggleBodyDarkMode(isDarkMode)
-    if(isNotSpecified || hasNoSupport) {
+    toggleBodyDarkMode(isDarkMode);
+    if (isNotSpecified || hasNoSupport) {
       const now = new Date();
       const hour = now.getHours();
       if (hour < 4 || hour >= 16) {
@@ -105,8 +115,6 @@ function setColorScheme() {
       }
     }
   }
-
-
 }
 
 setColorScheme();
@@ -115,12 +123,10 @@ timeline.forEach(e => lazyLoad(e, appendClasses));
 sliders.forEach(e => lazyLoad(e, initCarousel, { rootMargin: "100px" }));
 
 smoothScroll.forEach(e => {
-  e.addEventListener('click', (event) => {
+  e.addEventListener("click", event => {
     event.preventDefault();
-    document.getElementById(e.getAttribute('href').substr(1)).scrollIntoView({
-      behavior: "smooth",
-    })
-  })
+    document.getElementById(e.getAttribute("href").substr(1)).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
 });
-
-
