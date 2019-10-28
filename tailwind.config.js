@@ -26,7 +26,8 @@ module.exports = {
         "2xl": "2.5rem"
       },
       borderColor: theme => ({
-        line: `rgba(${theme("colors.gray.300")}, .5)`
+        line: `rgba(${theme("colors.gray.300")}, .5)`,
+        light: `rgba(${theme("colors.gray.300")}, .3)`
       }),
       borderWidth: theme => ({
         "6": "1.5rem",
@@ -117,12 +118,12 @@ module.exports = {
         },
 
         gray: {
+          50: "#F7F7F7",
+          80: "#ededed",
           100: "#cccccc",
-
+          200: "#555555",
           300: "#707070",
-
           500: "#7e7e7e",
-
           700: "#2e2e2e",
           800: "#141414",
           900: "#212121"
@@ -278,7 +279,7 @@ module.exports = {
     })
   },
   variants: {
-    backgroundColor: ["responsive", "hover", "group-hover"],
+    backgroundColor: ["dark", "responsive", "hover", "group-hover"],
     inset: ["responsive"],
     translate: ["responsive"],
     scale: ["responsive"],
@@ -286,13 +287,16 @@ module.exports = {
     transitionDuration: ["responsive"],
     transitionTimingFunction: ["responsive"],
     transitionDelay: ["responsive"],
-    textColor: ["hover", "group-hover"]
+    textColor: ["dark", "dark-hover", "dark-focus", "hover", "group-hover"],
+    borderColor: ["dark", "hover", "group-hover", "responsive"],
+    borderSideColors: ["dark"]
   },
   plugins: [
     require("tailwindcss-aspect-ratio")(),
     require("tailwindcss-transforms")(),
     require("tailwindcss-transitions")(),
     require("tailwindcss-pseudo")(),
+    require("tailwindcss-dark-mode")(),
     function({ addUtilities, e, theme, config }) {
       const borderUtilities = [];
       _.map(theme("borderSideColors"), (value, key) => {

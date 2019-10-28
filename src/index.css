@@ -51,6 +51,24 @@ body {
 @tailwind utilities;
 
 @responsive {
+  .gradient-fade-half {
+    background: linear-gradient(to top, #ffffff 50%, rgba(0, 0, 0, 0));
+  }
+
+  .gradient-fade {
+    background: linear-gradient(to top, #ffffff 10%, rgba(0, 0, 0, 0));
+  }
+
+  .mode-dark .gradient-fade-half {
+    background: linear-gradient(to top, #000000 50%, rgba(0, 0, 0, 0));
+  }
+
+  .mode-dark .gradient-fade {
+    background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));
+  }
+}
+
+/* @variants dark {
   .gradient-fade {
     background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));
   }
@@ -58,7 +76,7 @@ body {
   .gradient-fade-half {
     background: linear-gradient(to top, #000000 50%, rgba(0, 0, 0, 0));
   }
-}
+} */
 
 @keyframes rotate-0 {
   from {

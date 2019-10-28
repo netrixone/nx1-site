@@ -7,6 +7,7 @@ const postcssPlugins = [postcsshex, tailwindcss];
 if (process.env.NODE_ENV === "production") {
   postcssPlugins.push(
     purgecss({
+      whitelist: ["mode-dark"],
       content: ["./src/**/*.*"],
       defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
     })
