@@ -20,7 +20,7 @@ const isNotSpecified = window.matchMedia(
   "(prefers-color-scheme: no-preference)"
 ).matches;
 const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
-let hasSchemeStored = sessionStorage.getItem("darkModeStored");
+let hasSchemeStored = localStorage.getItem("darkModeStored");
 
 const lazyLoad = (target, cb, config = {}) => {
   const io = new IntersectionObserver(
@@ -82,11 +82,13 @@ function initCarousel(entry) {
 
 function switchDarkMode(element) {
   let darkColorScheme =
-    hasSchemeStored !== null ? hasSchemeStored == "true" : isDarkMode;
+    hasSchemeStored !== null
+      ? hasSchemeStored == "true"
+      : isDarkMode || !isNotSpecified;
   element.addEventListener("click", event => {
     event.preventDefault();
     darkColorScheme = !darkColorScheme;
-    sessionStorage.setItem("darkModeStored", darkColorScheme.toString());
+    localStorage.setItem("darkModeStored", darkColorScheme.toString());
     toggleBodyDarkMode(darkColorScheme);
   });
 }
@@ -106,7 +108,7 @@ function setColorScheme() {
       .matchMedia("(prefers-color-scheme: light)")
       .addListener(e => e.matches && toggleBodyDarkMode(false));
 
-    toggleBodyDarkMode(isDarkMode);
+    toggleBodyDarkMode(isDarkMode || !isNotSpecified);
     if (isNotSpecified || hasNoSupport) {
       const now = new Date();
       const hour = now.getHours();
