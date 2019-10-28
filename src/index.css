@@ -24,6 +24,10 @@
 
 @tailwind components;
 
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
 .list li:before {
   content: "\2014";
   @apply absolute -ml-4 text-blue-500;
@@ -58,39 +62,46 @@
 
 @keyframes rotate-0 {
   from {
-    transform: rotate3d(0, 0, 1, 0);
+    transform: rotate(15deg) translateZ(1px);
   }
   to {
-    transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate(375deg) translateZ(1px);
   }
 }
 
-@keyframes rotate-15 {
+@keyframes rotate-1 {
   from {
-    @apply rotate-15;
+    transform: rotate(40deg) translateZ(1px);
   }
   to {
-    @apply rotate-375;
+    transform: rotate(400deg) translateZ(1px);
   }
 }
 
-@keyframes rotate-random {
-  0% {
-    @apply rotate-0;
+@keyframes rotate-2 {
+  from {
+    transform: rotate(70deg) translateZ(1px);
   }
-  25% {
-    @apply rotate-75;
+  to {
+    transform: rotate(430deg) translateZ(1px);
   }
-  50% {
-    @apply rotate-160;
+}
+
+@keyframes rotate-3 {
+  from {
+    transform: rotate(140deg) translateZ(1px);
   }
-  100% {
-    @apply rotate-360;
+  to {
+    transform: rotate(500deg) translateZ(1px);
   }
 }
 
 .transform-reset-3d {
   transform: translate3d(0, 0, 0);
+}
+
+.transform-z {
+  transform: translateZ(0);
 }
 
 .animation-200 {
@@ -142,14 +153,16 @@
 }
 
 .animation-rotate-0 {
-  backface-visibility: hidden;
-  perspective: 1000;
-  will-change: transform;
   animation-name: rotate-0;
 }
-
-.animation-rotate-15 {
-  animation-name: rotate-15;
+.animation-rotate-1 {
+  animation-name: rotate-1;
+}
+.animation-rotate-2 {
+  animation-name: rotate-2;
+}
+.animation-rotate-3 {
+  animation-name: rotate-3;
 }
 
 .animation-rotate-reverse {
@@ -158,4 +171,21 @@
 
 .animation-timing-linear {
   animation-timing-function: linear;
+}
+
+.backface-visibility-hidden {
+  backface-visibility: hidden;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.outline-clean {
+  outline: 1px solid transparent;
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.perspective {
+  perspective: 1000px;
 }

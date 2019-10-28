@@ -1,7 +1,8 @@
 const tailwindcss = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
 const purgecss = require("@fullhuman/postcss-purgecss");
-const postcssPlugins = [tailwindcss];
+const postcsshex = require("postcss-hexrgba");
+const postcssPlugins = [postcsshex, tailwindcss];
 
 if (process.env.NODE_ENV === "production") {
   postcssPlugins.push(

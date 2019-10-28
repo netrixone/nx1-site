@@ -32,7 +32,7 @@
 			href="./favicon/safari-pinned-tab.svg"
 			color="#5bbad5"
 		/>
-		<link rel="shortcut icon" href="./favicon/favicon.ico">
+		<link rel="shortcut icon" href="./favicon/favicon.ico" />
 		<meta name="msapplication-TileColor" content="#da532c" />
 		<meta name="theme-color" content="#ffffff" />
 	</head>
@@ -41,50 +41,36 @@
 			class="top-0 relative bg-black text-white overflow-hidden lg:max-h-90 2xl:max-h-240 lg:min-h-216 lg:h-screen"
 		>
 			<div
-				class="fixed 5xl:relative top-20 lg:top-28 left-1/5 lg:left-1/3 w-18 h-18 transform-reset-3d"
+				class="absolute lg:fixed 5xl:absolute top-20 lg:top-28 left-1/5 lg:left-1/3 w-18 h-18 transform-z"
 			>
-				<div class="absolute top-2 -translate-x-1/2">
+				<div
+					class="absolute top-2 -translate-x-1/2 perspective backface-visibility-hidden"
+				>
 					<div
-						class="animation-duration-long animation-iteration-infinite animation-rotate-0 animation-timing-linear"
-					>
-						<span
-							class="inline-block w-max border-t border-gray-300 opacity-50 rotate-12"
-						></span>
-					</div>
+						class="outline-clean border-b border-line w-max animation-duration-long animation-iteration-infinite animation-rotate-0 animation-timing-linear will-change-transform"
+					></div>
 				</div>
 
 				<div class="absolute -translate-x-1/2">
 					<div
-						class="animation-duration-long animation-iteration-infinite animation-rotate-0 animation-timing-linear"
-					>
-						<span
-							class="inline-block w-max border-t border-gray-300 opacity-50 rotate-40"
-						></span>
-					</div>
-				</div>
+						class="outline-clean border-b border-line w-max animation-duration-long animation-iteration-infinite animation-rotate-1 animation-timing-linear will-change-transform"
+					></div>
 
+				</div>
 				<div class="absolute -translate-x-1/2">
 					<div
-						class="animation-duration-long animation-iteration-infinite animation-rotate-0 animation-timing-linear"
-					>
-						<span
-							class="inline-block w-max border-t border-gray-300 opacity-50 rotate-70"
-						></span>
-					</div>
+						class="outline-clean border-b border-line w-max animation-duration-long-2 animation-iteration-infinite animation-rotate-2 animation-timing-linear will-change-transform"
+					></div>
 				</div>
 				<div class="absolute top-12 -translate-x-1/2">
 					<div
-						class="animation-duration-long-2 animation-iteration-infinite animation-rotate-0 animation-timing-linear"
-					>
-						<span
-							class="inline-block w-max border-t border-gray-300 opacity-50 rotate-140"
-						></span>
-					</div>
+						class="outline-clean border-b border-line w-max animation-duration-long-3 animation-iteration-infinite animation-rotate-3 animation-timing-linear will-change-transform"
+					></div>
 				</div>
 			</div>
 
 			<div
-				class="pt-12 pb-20 lg:py-32 px-8 lg:fixed 5xl:relative transform-reset-3d w-full flex flex-col items-center justify-center text-center"
+				class="pt-12 pb-20 lg:py-32 px-8 lg:fixed 5xl:relative w-full flex flex-col items-center justify-center text-center transform-z will-change-transform backface-visibility-hidden"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +220,7 @@
 					</g>
 				</svg>
 				<div
-					class="mb-8 lg:mb-32 py-4 px-4 md:px-6 lg:px-8 bg-black text-center relative z-20 transform-reset-3d"
+					class="mb-8 lg:mb-32 py-4 px-4 md:px-6 lg:px-8 bg-black text-center relative z-20"
 				>
 					<h1 class="mb-2 text-base lg:text-xl font-bold">
 						is a group of IT professionals spanning multiple areas
@@ -295,18 +281,18 @@
 			</div>
 		</header>
 		<section
-			class="px-8 pt-12 pb-20 bg-gray-900 relative overflow-hidden z-10 transform-reset-3d "
+			class="px-8 pt-12 pb-20 bg-gray-900 relative overflow-hidden z-10"
 		>
 			<div class="-mt-24 -ml-20 absolute top-1/6 left-1/4 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-25"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-25"
 					></span>
 				</div>
 
 				<div class="absolute -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-175"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-175"
 					></span>
 				</div>
 			</div>
@@ -314,13 +300,13 @@
 			<div class="lg:hidden absolute top-20 left-3/4 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-5"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-5"
 					></span>
 				</div>
 
 				<div class="absolute -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-165"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-165"
 					></span>
 				</div>
 			</div>
@@ -328,13 +314,13 @@
 			<div class="lg:hidden absolute top-56 left-1/4 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-15"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-15"
 					></span>
 				</div>
 
 				<div class="absolute -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-170"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-170"
 					></span>
 				</div>
 			</div>
@@ -342,13 +328,13 @@
 			<div class="-mt-56 lg:hidden absolute top-1/3 left-1/4 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-40"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-40"
 					></span>
 				</div>
 
 				<div class="absolute -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-"
 					></span>
 				</div>
 			</div>
@@ -356,13 +342,13 @@
 			<div class="mt-128 lg:hidden absolute top-1/3 left-3/4 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-5"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-5"
 					></span>
 				</div>
 
 				<div class="absolute -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-170"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-170"
 					></span>
 				</div>
 			</div>
@@ -370,13 +356,13 @@
 			<div class="absolute top-1/3 left-3/4 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-10"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-10"
 					></span>
 				</div>
 
 				<div class="absolute -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-175"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-175"
 					></span>
 				</div>
 			</div>
@@ -384,7 +370,7 @@
 			<div class="mt-32 absolute top-1/3 left-1/4 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-20"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-20"
 					></span>
 				</div>
 			</div>
@@ -392,7 +378,7 @@
 			<div class="absolute top-1/2 left-3/4 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-165"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-165"
 					></span>
 				</div>
 			</div>
@@ -400,7 +386,7 @@
 			<div class="ml-20 absolute top-2/3 left-1/4 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-25"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-25"
 					></span>
 				</div>
 			</div>
@@ -410,12 +396,12 @@
 			>
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-160 lg:rotate-175"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-160 lg:rotate-175"
 					></span>
 				</div>
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-15 lg:rotate-5"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-15 lg:rotate-5"
 					></span>
 					¨
 				</div>
@@ -424,12 +410,12 @@
 			<div class="ml-20 absolute bottom-0 left-1/2 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-20"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-20"
 					></span>
 				</div>
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-25 rotate-165"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-165"
 					></span>
 				</div>
 			</div>
@@ -645,9 +631,7 @@
 			</div>
 		</section>
 
-		<section
-			class="px-4 md:px-10 py-10 bg-white relative z-10 transform-reset-3d "
-		>
+		<section class="px-4 md:px-10 py-10 bg-white relative z-10">
 			<h2
 				class="mb-8 uppercase text-blue-500 text-lg lg:text-4xl text-center font-bold font-arvo"
 			>
@@ -1051,7 +1035,7 @@
 		<section
 			class="px-8 pt-24 lg:pt-48 pb-24 lg:pb-32 bg-black relative z-10 overflow-hidden"
 		>
-			<div class="absolute w-full right-0 left-0 top-0 z-50">
+			<div class="absolute w-full right-0 left-0 top-0 z-50 translate-z">
 				<div
 					class="absolute top-0 w-0 border-t-white border-transparent border-r-transparent border-t-6 lg:border-t-10 border-r-screen-20 z-20"
 				></div>
@@ -1066,72 +1050,74 @@
 			<div class="absolute top-1/6 left-1/4 ml-20 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-30"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-30"
 					></span>
 				</div>
 
 				<div class="absolute -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-175"
-					></span>
-				</div>
-			</div>
-
-			<div class="absolute top-1/3 left-2/3 mt-20 ml-32 w-18 h-18">
-				<div class="absolute top-2 -translate-x-1/2">
-					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-10"
-					></span>
-				</div>
-
-				<div class="absolute -translate-x-1/2">
-					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-175"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-175"
 					></span>
 				</div>
 			</div>
 
 			<div
-				class="absolute top-2/5 left-1/5 mt-40 ml-20 w-18 h-18 lg:hidden"
+				class="absolute top-1/3 left-2/3 mt-20 ml-32 w-18 h-18 translate-z"
+			>
+				<div class="absolute top-2 -translate-x-1/2">
+					<span
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-10"
+					></span>
+				</div>
+
+				<div class="absolute -translate-x-1/2">
+					<span
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-175"
+					></span>
+				</div>
+			</div>
+
+			<div
+				class="absolute top-2/5 left-1/5 mt-40 ml-20 w-18 h-18 lg:hidden translate-z"
 			>
 				<div class="absolute -mt-32 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-45"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-45"
 					></span>
 				</div>
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-20"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-20"
 					></span>
 				</div>
 				<div class="absolute -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-150"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-150"
 					></span>
 				</div>
 			</div>
 
 			<div
-				class="absolute top-1/2 lg:top-1/3 left-1/5 mt-40 ml-20 w-18 h-18"
+				class="absolute top-1/2 lg:top-1/3 left-1/5 mt-40 ml-20 w-18 h-18 translate-z"
 			>
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-20"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-20"
 					></span>
 				</div>
 				<div class="absolute -translate-x-1/2 lg:hidden">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-150"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-150"
 					></span>
 				</div>
 			</div>
 
 			<div
-				class="absolute bottom-1/4 lg:top-1/2 left-3/4 mt-18 ml-20 w-18 h-18"
+				class="absolute bottom-1/4 lg:top-1/2 left-3/4 mt-18 ml-20 w-18 h-18 translate-z"
 			>
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-165"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-165"
 					></span>
 				</div>
 			</div>
@@ -1667,13 +1653,13 @@
 			<div class="ml-32 absolute top-1/5 lg:top-0 left-1/2 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-20"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-20"
 					></span>
 				</div>
 
 				<div class="absolute -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-170"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-170"
 					></span>
 				</div>
 			</div>
@@ -1683,20 +1669,20 @@
 			>
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-30"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-30"
 					></span>
 				</div>
 
 				<div class="absolute -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-175"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-175"
 					></span>
 				</div>
 			</div>
 			<div class="absolute bottom-1/4 lg:bottom-0 left-1/2 w-18 h-18">
 				<div class="absolute top-2 -translate-x-1/2">
 					<span
-						class="inline-block w-max border-t border-gray-300 opacity-50 rotate-5"
+						class="inline-block w-max h-px shadow-line border-gray-300 rotate-5"
 					></span>
 				</div>
 			</div>

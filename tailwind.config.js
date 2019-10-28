@@ -25,6 +25,9 @@ module.exports = {
         xl: "1.5rem",
         "2xl": "2.5rem"
       },
+      borderColor: theme => ({
+        line: `rgba(${theme("colors.gray.300")}, .5)`
+      }),
       borderWidth: theme => ({
         "6": "1.5rem",
         "8": "2rem",
@@ -75,12 +78,16 @@ module.exports = {
         "screen-20": "20vw",
         "screen-18": "18vw"
       }),
+      heiht: {
+        px: "1px"
+      },
       width: {
         max: "9999px"
       },
       inset: theme => ({
         ...theme("spacing"),
-        ...theme("width")
+        ...theme("width"),
+        px: "1px"
       }),
       colors: {
         transparent: "transparent",
