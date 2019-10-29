@@ -20,8 +20,7 @@ const isNotSpecified = window.matchMedia(
   "(prefers-color-scheme: no-preference)"
 ).matches;
 const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
-let hasSchemeStored = localStorage.getItem("darkModeStored");
-
+let darkColorScheme = false;
 const lazyLoad = (target, cb, config = {}) => {
   const io = new IntersectionObserver(
     (entries, observer) => {
@@ -81,10 +80,6 @@ function initCarousel(entry) {
 }
 
 function switchDarkMode(element) {
-  let darkColorScheme =
-    hasSchemeStored !== null
-      ? hasSchemeStored == "true"
-      : isDarkMode || !isNotSpecified;
   element.addEventListener("click", event => {
     event.preventDefault();
     darkColorScheme = !darkColorScheme;
@@ -98,24 +93,19 @@ function toggleBodyDarkMode(toggle = false): void {
 }
 
 function setColorScheme() {
-  if (hasSchemeStored !== null) {
-    toggleBodyDarkMode(hasSchemeStored == "true");
-  } else {
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addListener(e => e.matches && toggleBodyDarkMode(true));
-    window
-      .matchMedia("(prefers-color-scheme: light)")
-      .addListener(e => e.matches && toggleBodyDarkMode(false));
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addListener(e => e.matches && toggleBodyDarkMode(true));
+  window
+    .matchMedia("(prefers-color-scheme: light)")
+    .addListener(e => e.matches && toggleBodyDarkMode(false));
 
-    toggleBodyDarkMode(isDarkMode || !isNotSpecified);
-    if (isNotSpecified || hasNoSupport) {
-      const now = new Date();
-      const hour = now.getHours();
-      if (hour < 4 || hour >= 16) {
-        toggleBodyDarkMode(true);
-      }
-    }
+  if (isDarkMode) {
+    toggleBodyDarkMode(true);
+  } else if (isLightMode) {
+    toggleBodyDarkMode(false);
+  } else {
+    toggleBodyDarkMode(true);
   }
 }
 

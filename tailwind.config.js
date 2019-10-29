@@ -27,7 +27,7 @@ module.exports = {
       },
       borderColor: theme => ({
         line: `rgba(${theme("colors.gray.300")}, .5)`,
-        light: `rgba(${theme("colors.gray.300")}, .3)`
+        light: `rgba(${theme("colors.gray.100")}, .3)`
       }),
       borderWidth: theme => ({
         "6": "1.5rem",
@@ -118,7 +118,7 @@ module.exports = {
         },
 
         gray: {
-          50: "#F7F7F7",
+          50: "#FCFCFC",
           80: "#ededed",
           100: "#cccccc",
           200: "#555555",
