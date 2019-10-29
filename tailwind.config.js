@@ -26,7 +26,7 @@ module.exports = {
         "2xl": "2.5rem"
       },
       borderColor: theme => ({
-        line: `rgba(${theme("colors.gray.300")}, .5)`,
+        line: `rgba(${theme("colors.gray.200")}, .4)`,
         light: `rgba(${theme("colors.gray.100")}, .3)`
       }),
       borderWidth: theme => ({
