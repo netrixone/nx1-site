@@ -17,7 +17,7 @@
 @font-face {
   font-family: Roboto Mono;
   font-weight: 400;
-  src: url("./fonts/robotomono-bold.woff2") format("woff2"),
+  src: url("./fonts/robotomono-regular.woff2") format("woff2"),
     url("./fonts/robotomono-regular.woff") format("woff");
   font-display: swap;
 }
