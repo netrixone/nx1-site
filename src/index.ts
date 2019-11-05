@@ -20,7 +20,16 @@ const isNotSpecified = window.matchMedia(
   "(prefers-color-scheme: no-preference)"
 ).matches;
 const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
-let darkColorScheme = false;
+let darkColorScheme = isDarkMode;
+
+const DARK_MODE_STRING = "nx1-dark-theme-enable";
+const DARK_MODE_COOKIE_LENGTH = 31;
+const storedDarkMode = getCookie(DARK_MODE_STRING);
+
+if (storedDarkMode) {
+  darkColorScheme = storedDarkMode === "true";
+}
+
 const lazyLoad = (target, cb, config = {}) => {
   const io = new IntersectionObserver(
     (entries, observer) => {
@@ -85,6 +94,8 @@ function switchDarkMode(element) {
     darkColorScheme = !darkColorScheme;
     localStorage.setItem("darkModeStored", darkColorScheme.toString());
     toggleBodyDarkMode(darkColorScheme);
+
+    setCookie(DARK_MODE_STRING, darkColorScheme, DARK_MODE_COOKIE_LENGTH);
   });
 }
 
@@ -93,19 +104,23 @@ function toggleBodyDarkMode(toggle = false): void {
 }
 
 function setColorScheme() {
-  window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addListener(e => e.matches && toggleBodyDarkMode(true));
-  window
-    .matchMedia("(prefers-color-scheme: light)")
-    .addListener(e => e.matches && toggleBodyDarkMode(false));
-
-  if (isDarkMode) {
-    toggleBodyDarkMode(true);
-  } else if (isLightMode) {
-    toggleBodyDarkMode(false);
+  if (typeof storedDarkMode !== null && storedDarkMode !== "") {
+    toggleBodyDarkMode(storedDarkMode === "true");
   } else {
-    toggleBodyDarkMode(true);
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addListener(e => e.matches && toggleBodyDarkMode(true));
+    window
+      .matchMedia("(prefers-color-scheme: light)")
+      .addListener(e => e.matches && toggleBodyDarkMode(false));
+
+    if (isDarkMode) {
+      toggleBodyDarkMode(true);
+    } else if (isLightMode) {
+      toggleBodyDarkMode(false);
+    } else {
+      toggleBodyDarkMode(true);
+    }
   }
 }
 
@@ -122,3 +137,32 @@ smoothScroll.forEach(e => {
     });
   });
 });
+
+function getCookie(value: string): string {
+  const name = value + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(";");
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function setCookie(
+  name: string,
+  value: string | boolean,
+  exdays: number
+): void {
+  console.log(value);
+
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
