@@ -148,8 +148,7 @@ function expandContent(e: Element): void {
 
 function scrollIntoViewElement(element: Element): void {
   element.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
+    behavior: "smooth"
   })
 }
 
