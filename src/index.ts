@@ -10,6 +10,7 @@ const sliders = Array.from(document.querySelectorAll("[data-slider]"));
 const smoothScroll = Array.from(
   document.querySelectorAll("[data-smooth-scroll]")
 );
+const expander = Array.from(document.querySelectorAll("[data-expand-trigger]"));
 const htmlElement = document.getElementsByTagName("html")[0];
 const darkModeSwitcher = Array.from(
   document.querySelectorAll("[data-toggle-dark-mode]")
@@ -124,19 +125,33 @@ function setColorScheme() {
   }
 }
 
-setColorScheme();
-darkModeSwitcher.forEach(e => switchDarkMode(e));
-timeline.forEach(e => lazyLoad(e, appendClasses));
-sliders.forEach(e => lazyLoad(e, initCarousel, { rootMargin: "100px" }));
-
-smoothScroll.forEach(e => {
+function expandContent(e: Element): void {
+  const content = document.querySelector(`[data-expand-content="${e.getAttribute("data-expand-trigger")}"]`) as HTMLElement;
+  let isExpanded = false
   e.addEventListener("click", event => {
     event.preventDefault();
-    document.getElementById(e.getAttribute("href").substr(1)).scrollIntoView({
-      behavior: "smooth"
-    });
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    };
+    e.innerHTML = e.getAttribute(isExpanded ? "data-show-more" : "data-show-less");
+    isExpanded = !isExpanded;
   });
-});
+
+  content.addEventListener("transitionend", (e) => {
+    if (e.propertyName === "max-height") {
+      scrollIntoViewElement(content);
+    }
+  })
+}
+
+function scrollIntoViewElement(element: Element): void {
+  element.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  })
+}
 
 function getCookie(value: string): string {
   const name = value + "=";
@@ -159,10 +174,20 @@ function setCookie(
   value: string | boolean,
   exdays: number
 ): void {
-  console.log(value);
-
   var d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   var expires = "expires=" + d.toUTCString();
   document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
+
+setColorScheme();
+darkModeSwitcher.forEach(e => switchDarkMode(e));
+timeline.forEach(e => lazyLoad(e, appendClasses));
+sliders.forEach(e => lazyLoad(e, initCarousel, { rootMargin: "100px" }));
+expander.forEach(e => expandContent(e));
+smoothScroll.forEach(e => {
+  e.addEventListener("click", event => {
+    event.preventDefault();
+    scrollIntoViewElement(document.getElementById(e.getAttribute("href").substr(1)));
+  });
+});

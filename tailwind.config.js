@@ -88,7 +88,8 @@ module.exports = {
       inset: theme => ({
         ...theme("spacing"),
         ...theme("width"),
-        px: "1px"
+        px: "1px",
+        "-24": "-6rem"
       }),
       colors: {
         transparent: "transparent",

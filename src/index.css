@@ -48,6 +48,10 @@ body {
   @apply text-gray-300 opacity-25;
 }
 
+.mb-sideline {
+  margin-bottom: 22px;
+}
+
 @tailwind utilities;
 
 @responsive {
