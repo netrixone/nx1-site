@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "parcel src/index.html --no-cache",
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/index.html --no-cache",
     "deploy": "npm run build & now -f"
   },
   "browserslist": [

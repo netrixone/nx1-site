@@ -190,3 +190,7 @@ smoothScroll.forEach(e => {
     scrollIntoViewElement(document.getElementById(e.getAttribute("href").substr(1)));
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  htmlElement.classList.remove("opacity-0", "invisible");
+})

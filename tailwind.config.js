@@ -248,6 +248,10 @@ module.exports = {
       "750": "750ms",
       "1000": "1000ms"
     },
+    transitionDelay: { // defaults to these values
+      'default': '0ms',
+      '250': '250ms'
+    },
     transitionProperty: {
       // defaults to these values
       none: "none",
@@ -256,6 +260,7 @@ module.exports = {
       bg: "background-color",
       border: "border-color",
       colors: ["color", "background-color", "border-color"],
+      button: ["color", "border-color"],
       opacity: "opacity",
       transform: "transform"
     },
