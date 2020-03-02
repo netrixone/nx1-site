@@ -1113,6 +1113,33 @@
 				<div
 					class="mb-20 pl-8 lg:pl-0 flex flex-col relative text-white"
 				>
+					<article class="mb-20 lg:pl-12 w-full lg:w-1/2 self-end transition-all">
+						<div
+							class="absolute left-0 lg:left-1/2 bg-gray-50 dark\:bg-gray-900 border-2 border-blue-500 rounded-full w-6 h-6 lg:w-8 lg:h-8 -translate-x-1/2 z-20"
+						></div>
+						<div
+							class="lg:opacity-0 lg:translate-x-100 transition-all transition-750 relative flex flex-col"
+							data-observe
+							data-classes="lg:opacity-0 lg:translate-x-100"
+						>
+							<h3
+								class="mb-4 font-arvo text:base lg:text-lg text-blue-500 uppercase font-bold"
+							>
+								🐝 OWASP Brno
+							</h3>
+							<span class="lg:absolute lg:-left-24 lg:-translate-x-full lg:top-1 font-semibold">2020-03</span>
+							<p class="mb-4 text-gray-200 dark\:text-gray-100 lg:max-w-1/2">
+								Impact Hub, Brno. 31th of March. See you there!
+							</p>
+							<a
+								href="https://www.eventbrite.com/e/owasp-czech-chapter-meeting-registration-97139953215"
+								target="_blank"
+								class="px-4 lg:px-8 py-2 relative text-sm inline-flex bg-white dark\:bg-gray-900 self-start justify-center border-2 border-blue-500 text-blue-500 hover:text-blue-700 hover:border-blue-700 transition-all rounded-full font-weight min-w-40 z-20 whitespace-no-wrap"
+							>
+								Read more
+							</a>
+						</div>
+					</article>
 					<article class="mb-20 lg:pr-12 w-full lg:w-1/2 transition-all">
 						<div
 							class="absolute left-0 lg:left-1/2 bg-gray-50 dark\:bg-gray-900 border-2 border-blue-500 rounded-full w-6 h-6 lg:w-8 lg:h-8 -translate-x-1/2 z-20"
@@ -1813,7 +1840,31 @@
 					From our blog
 				</h2>
 				<div class="-mx-12 px-6 lg:px-0 flex flex-wrap justify-center">
-					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/4">
+					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/3">
+						<h3
+							class="mb-4 uppercase text-base lg:text-lg font-arvo font-bold"
+						>
+							<a
+								href="https://dev.to/nx1/endpoint-fingerprinting-11op"
+								class="text-pink-500 hover:text-pink-700 focus:text-pink-700 transition-color"
+							>SMB: endpoint fingerprinting</a
+							>
+						</h3>
+						<p class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-200 dark\:text-gray-100">2020-03-02</p>
+						<p
+							class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-200 dark\:text-gray-100"
+						>
+							This time let's focus on messages that carry hints about the connected endpoints,
+							which can be used to infer knowledge about the client and server (e.g. OS version).
+							This process is called fingerprinting.
+						</p>
+						<a
+							href="https://dev.to/nx1/endpoint-fingerprinting-11op"
+							class="px-6 md:px-8 py-2 text-sm lg:text-base relative inline-flex bg-gray-50 dark\:bg-black justify-center border-2 border-pink-500 text-pink-500 hover:text-pink-700 hover:border-pink-700 transition-all rounded-full font-weight"
+						>Read more</a
+						>
+					</article>
+					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/3">
 						<h3
 							class="mb-4 uppercase text-base lg:text-lg font-arvo font-bold"
 						>
@@ -1823,6 +1874,7 @@
 							>SMB: metadata in RPC</a
 							>
 						</h3>
+						<p class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-200 dark\:text-gray-100">2020-01-22</p>
 						<p
 							class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-200 dark\:text-gray-100"
 						>
@@ -1835,7 +1887,7 @@
 						>Read more</a
 						>
 					</article>
-					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/4">
+					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/3">
 						<h3
 							class="mb-4 text-pink-500 uppercase text-base lg:text-lg font-arvo font-bold"
 						>
@@ -1845,6 +1897,7 @@
 							>SMB: file metadata and metadata files</a
 							>
 						</h3>
+						<p class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-200 dark\:text-gray-100">2020-01-08</p>
 						<p
 							class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-200 dark\:text-gray-100"
 						>
@@ -1858,7 +1911,7 @@
 						>Read more</a
 						>
 					</article>
-					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/4">
+					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/3">
 						<h3
 							class="mb-4 text-pink-500 uppercase text-base lg:text-lg font-arvo font-bold"
 						>
@@ -1868,6 +1921,7 @@
 							>Deploy Static Frontend + PHP Files Using ZEIT Now</a
 							>
 						</h3>
+						<p class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-200 dark\:text-gray-100">2019-12-16</p>
 						<p
 							class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-200 dark\:text-gray-100"
 						>
@@ -1880,7 +1934,7 @@
 						>Read more</a
 						>
 					</article>
-					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/4">
+					<article class="mb-6 lg:mb-4 px-12 w-full lg:w-1/3">
 						<h3
 							class="mb-4 text-pink-500 uppercase text-base lg:text-lg font-arvo font-bold"
 						>
@@ -1890,6 +1944,7 @@
 							> Bleeding Edge PHP on ZEIT Now</a
 							>
 						</h3>
+						<p class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-200 dark\:text-gray-100">2019-07-19</p>
 						<p
 							class="mb-2 lg:mb-4 text-sm lg:text-tiny text-gray-200 dark\:text-gray-100"
 						>
@@ -1972,20 +2027,16 @@
 					<h3 class="mb-2 text-lg dark\:text-white font-bold">Wanna meet?</h3>
 					<ul class="dark\:text-white">
 						<li class="mb-2">
+							<a href="https://owasp.org/www-chapter-czech-republic/" class="dark\:text-white underline dark-hover\:text-gray-100 transition-color">OWASP beers</a>
+							<p class="text-sm">We like to hang out with other people who ❤️ security. This event happens every last Thursday in month and takes place in Radegastovna Perón, Praha 5 around 7 PM.</p>
+						</li>
+						<li class="mb-2">
 							<a href="http://meetings.2600.cz" class="dark\:text-white underline dark-hover\:text-gray-100 transition-color">2600 meetup</a>
 							<p class="text-sm">Occasionally we attend a local meetup of the famous 2600 magazine (first Friday of the month). The atmosphere is friendly, the food's great and you can meet some really interesting people there.</p>
 						</li>
-						<!--<li class="mb-2">-->
-							<!--<a href="https://www.posobota.cz/" class="dark\:text-white underline dark-hover\:text-gray-100 transition-color">PoSobota</a>-->
-							<!--<p class="text-sm">TODO</p>-->
-						<!--</li>-->
 						<li class="mb-2">
 							<a href="https://www.meetup.com/ngParty/" class="dark\:text-white underline dark-hover\:text-gray-100 transition-color">ngParty</a>
 							<p class="text-sm">NG standing for Next Generation, this meetup offers interesting talks about the latest technologies. With primary focus on JavaScript and Typescript there have also been great talks about security, Docker and other stuff.</p>
-						</li>
-						<li class="mb-2">
-							<a href="https://www.owasp.org/index.php/Czech_Republic" class="dark\:text-white underline dark-hover\:text-gray-100 transition-color">OWASP Czech Republic</a>
-							<p class="text-sm">Several times a year local OWASP chapter brings you awesome conferences focused on web security.</p>
 						</li>
 					</ul>
 				</div>
