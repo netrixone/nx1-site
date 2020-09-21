@@ -9,7 +9,7 @@
     "ie 11"
   ],
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "autoprefixer": "^9.8.6",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
