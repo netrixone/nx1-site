@@ -25,6 +25,6 @@
   },
   "dependencies": {
     "intersection-observer": "0.11.0",
-    "swiper": "^6.3.2"
+    "swiper": "^6.3.3"
   }
 }
