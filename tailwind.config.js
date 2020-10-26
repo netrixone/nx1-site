@@ -1,6 +1,13 @@
 const _ = require("lodash");
 
 module.exports = {
+  purge: false,
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+    defaultLineHeights: true,
+    standardFontWeights: true,
+  },
   theme: {
     container: {
       center: true
