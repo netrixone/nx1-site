@@ -306,11 +306,11 @@ module.exports = {
     borderSideColors: ["dark"]
   },
   plugins: [
-    require("tailwindcss-aspect-ratio")(),
-    require("tailwindcss-transforms")(),
-    require("tailwindcss-transitions")(),
-    require("tailwindcss-pseudo")(),
-    require("tailwindcss-dark-mode")(),
+    require('tailwindcss-aspect-ratio'),
+    require('tailwindcss-transforms')(),
+    require('tailwindcss-transitions')(),
+    require('tailwindcss-pseudo')(),
+    require('tailwindcss-dark-mode')(),
     function({ addUtilities, e, theme, config }) {
       const borderUtilities = [];
       _.map(theme("borderSideColors"), (value, key) => {
