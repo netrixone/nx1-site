@@ -1,19 +1,16 @@
 {
-  "scripts": {
-    "dev": "parcel src/index.html --no-cache",
-    "build": "parcel build src/index.html --no-cache",
-    "deploy": "npm run build & now -f"
+  "name": "nx1-site",
+  "dependencies": {
+    "intersection-observer": "0.12.0",
+    "swiper": "^6.4.5"
   },
-  "browserslist": [
-    "last 2 Chrome versions",
-    "ie 11"
-  ],
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.1.3",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.1.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "parcel-bundler": "^1.3.1",
+    "postcss": "^8.2.2",
     "postcss-hexrgba": "^2.0.1",
     "tailwindcss": "^1.9.6",
     "tailwindcss-aspect-ratio": "^3.0.0",
@@ -23,9 +20,13 @@
     "tailwindcss-transitions": "^2.2.0",
     "typescript": "^4.1.3"
   },
-  "dependencies": {
-    "intersection-observer": "0.12.0",
-    "swiper": "^6.4.5"
+  "scripts": {
+    "dev": "parcel src/index.html --no-cache",
+    "build": "parcel build src/index.html --no-cache",
+    "deploy": "npm run build & vc"
   },
-  "name": "nx1-site"
+  "browserslist": [
+    "last 2 Chrome versions",
+    "ie 11"
+  ]
 }
