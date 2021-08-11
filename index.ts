@@ -20,7 +20,6 @@ const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches;
 const isNotSpecified = window.matchMedia(
   "(prefers-color-scheme: no-preference)"
 ).matches;
-const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified;
 let darkColorScheme = isDarkMode;
 
 const DARK_MODE_STRING = "nx1-dark-theme-enable";

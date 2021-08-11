@@ -1,13 +1,12 @@
-# IDE
-.DS_Store
-.idea
+# Nuxt
+/.nuxt
+/dist
 
-# Parcel
-/.cache/
-
-# NPM
+# Node
 /node_modules
 
-# App
-/dist
-.history
+# ENV
+.env
+
+# Vercel
+.vercel

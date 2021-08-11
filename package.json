@@ -1,31 +1,23 @@
 {
+  "name": "nx1",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "parcel src/index.html --no-cache",
-    "build": "parcel build src/index.html --no-cache",
-    "deploy": "npm run build & now -f"
-  },
-  "browserslist": [
-    "last 2 Chrome versions",
-    "ie 11"
-  ],
-  "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^3.1.3",
-    "autoprefixer": "^9.8.6",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "parcel-bundler": "^1.3.1",
-    "postcss-hexrgba": "^2.0.1",
-    "tailwindcss": "^1.9.6",
-    "tailwindcss-aspect-ratio": "^3.0.0",
-    "tailwindcss-dark-mode": "^1.1.7",
-    "tailwindcss-pseudo": "^1.0.3",
-    "tailwindcss-transforms": "^2.2.0",
-    "tailwindcss-transitions": "^2.2.0",
-    "typescript": "^4.1.5"
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate"
   },
   "dependencies": {
-    "intersection-observer": "0.12.0",
-    "swiper": "^6.4.11"
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/axios": "^5.12.2",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.14.5"
   },
-  "name": "nx1-site"
+  "devDependencies": {
+    "@babel/plugin-proposal-optional-chaining": "^7.11.0",
+    "@nuxt/types": "^2.14.5",
+    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxtjs/tailwindcss": "^3.1.0"
+  }
 }

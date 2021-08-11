@@ -4,9 +4,10 @@
   "scope": "nx1",
   "alias": ["nx1.cz", "nx1.eu", "netrixone.cz", "nx1.now.sh", "netrixone.now.sh"],
   "builds": [
-    { "src": "package.json", "use": "@now/static-build" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/dist/$1" }
+    {
+    "src": "nuxt.config.js",
+    "use": "@nuxtjs/now-builder",
+    "config": {}
+    }
   ]
 }
