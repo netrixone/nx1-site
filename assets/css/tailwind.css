@@ -5,71 +5,73 @@
 
 /* APP */
 @font-face {
-  font-family: Arvo;
-  font-weight: 700;
-  src: url("./fonts/arvo-bold.woff2") format("woff2"),
-    url("./fonts/arvo-bold.woff") format("woff");
-  font-display: swap;
+    font-family: Arvo;
+    font-weight: 700;
+    src: url("../fonts/arvo-bold.woff2") format("woff2"),
+    url("../fonts/arvo-bold.woff") format("woff");
+    font-display: swap;
 }
+
 @font-face {
-  font-family: Roboto Mono;
-  font-weight: 700;
-  src: url("./fonts/robotomono-bold.woff2") format("woff2"),
-    url("./fonts/robotomono-bold.woff") format("woff");
-  font-display: swap;
+    font-family: Roboto Mono;
+    font-weight: 700;
+    src: url("../fonts/robotomono-bold.woff2") format("woff2"),
+    url("../fonts/robotomono-bold.woff") format("woff");
+    font-display: swap;
 }
+
 @font-face {
-  font-family: Roboto Mono;
-  font-weight: 400;
-  src: url("./fonts/robotomono-regular.woff2") format("woff2"),
-    url("./fonts/robotomono-regular.woff") format("woff");
-  font-display: swap;
+    font-family: Roboto Mono;
+    font-weight: 400;
+    src: url("../fonts/robotomono-regular.woff2") format("woff2"),
+    url("../fonts/robotomono-regular.woff") format("woff");
+    font-display: swap;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
 }
 
 .list li:before {
-  content: "\2014";
-  @apply absolute -ml-4 text-blue-500;
+    content: "\2014";
+    @apply absolute -ml-4 text-blue-500;
 }
 
 .glide-slide {
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  touch-action: pan-y;
-  user-select: none;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    touch-action: pan-y;
+    user-select: none;
 }
 
 .slide-disabled {
-  @apply cursor-not-allowed;
+    @apply cursor-not-allowed;
 }
 
 .slide-disabled svg {
-  @apply text-gray-300 opacity-25;
+    @apply text-gray-300 opacity-25;
 }
 
 .mb-sideline {
-  margin-bottom: 22px;
+    margin-bottom: 22px;
 }
 
 @responsive {
-  .gradient-fade-half {
-    background: linear-gradient(to top, #ffffff 50%, rgba(0, 0, 0, 0));
-  }
+    .gradient-fade-half {
+        background: linear-gradient(to top, #ffffff 50%, rgba(0, 0, 0, 0));
+    }
 
-  .gradient-fade {
-    background: linear-gradient(to top, #ffffff 10%, rgba(0, 0, 0, 0));
-  }
+    .gradient-fade {
+        background: linear-gradient(to top, #ffffff 10%, rgba(0, 0, 0, 0));
+    }
 
-  .mode-dark .gradient-fade-half {
-    background: linear-gradient(to top, #000000 50%, rgba(0, 0, 0, 0));
-  }
+    .mode-dark .gradient-fade-half {
+        background: linear-gradient(to top, #000000 50%, rgba(0, 0, 0, 0));
+    }
 
-  .mode-dark .gradient-fade {
-    background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));
-  }
+    .mode-dark .gradient-fade {
+        background: linear-gradient(to top, #000000, rgba(0, 0, 0, 0));
+    }
 }
 
 /* @variants dark {
@@ -83,131 +85,134 @@ body {
 } */
 
 @keyframes rotate-0 {
-  from {
-    transform: rotate(15deg) translateZ(1px);
-  }
-  to {
-    transform: rotate(375deg) translateZ(1px);
-  }
+    from {
+        transform: rotate(15deg) translateZ(1px);
+    }
+    to {
+        transform: rotate(375deg) translateZ(1px);
+    }
 }
 
 @keyframes rotate-1 {
-  from {
-    transform: rotate(40deg) translateZ(1px);
-  }
-  to {
-    transform: rotate(400deg) translateZ(1px);
-  }
+    from {
+        transform: rotate(40deg) translateZ(1px);
+    }
+    to {
+        transform: rotate(400deg) translateZ(1px);
+    }
 }
 
 @keyframes rotate-2 {
-  from {
-    transform: rotate(70deg) translateZ(1px);
-  }
-  to {
-    transform: rotate(430deg) translateZ(1px);
-  }
+    from {
+        transform: rotate(70deg) translateZ(1px);
+    }
+    to {
+        transform: rotate(430deg) translateZ(1px);
+    }
 }
 
 @keyframes rotate-3 {
-  from {
-    transform: rotate(140deg) translateZ(1px);
-  }
-  to {
-    transform: rotate(500deg) translateZ(1px);
-  }
+    from {
+        transform: rotate(140deg) translateZ(1px);
+    }
+    to {
+        transform: rotate(500deg) translateZ(1px);
+    }
 }
 
 .transform-reset-3d {
-  transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 .transform-z {
-  transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .animation-200 {
-  animation-duration: 200s;
+    animation-duration: 200s;
 }
 
 .animation-250 {
-  animation-duration: 250s;
+    animation-duration: 250s;
 }
 
 .animation-300 {
-  animation-duration: 300s;
+    animation-duration: 300s;
 }
 
 .animation-350 {
-  animation-duration: 350s;
+    animation-duration: 350s;
 }
 
 .animation-400 {
-  animation-duration: 400s;
+    animation-duration: 400s;
 }
 
 .animation-duration-long {
-  animation-duration: 900s;
+    animation-duration: 900s;
 }
 
 .animation-duration-long-2 {
-  animation-duration: 1000s;
+    animation-duration: 1000s;
 }
 
 .animation-duration-long-3 {
-  animation-duration: 1100s;
+    animation-duration: 1100s;
 }
 
 .animatino-duration-short {
-  animation-duration: 35000ms;
+    animation-duration: 35000ms;
 }
 
 .animation-direction-normal  {
-  animation-direction: normal;
+    animation-direction: normal;
 }
 
 .animation-direction-reverse  {
-  animation-direction: reverse;
+    animation-direction: reverse;
 }
 
 .animation-iteration-infinite {
-  animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 .animation-rotate-0 {
-  animation-name: rotate-0;
+    animation-name: rotate-0;
 }
+
 .animation-rotate-1 {
-  animation-name: rotate-1;
+    animation-name: rotate-1;
 }
+
 .animation-rotate-2 {
-  animation-name: rotate-2;
+    animation-name: rotate-2;
 }
+
 .animation-rotate-3 {
-  animation-name: rotate-3;
+    animation-name: rotate-3;
 }
 
 .animation-rotate-reverse {
-  animation-name: rotate-reverse;
+    animation-name: rotate-reverse;
 }
 
 .animation-timing-linear {
-  animation-timing-function: linear;
+    animation-timing-function: linear;
 }
 
 .backface-visibility-hidden {
-  backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .will-change-transform {
-  will-change: transform;
+    will-change: transform;
 }
 
 .outline-clean {
-  outline: 1px solid transparent;
-  box-shadow: 0 0 0 1px transparent;
+    outline: 1px solid transparent;
+    box-shadow: 0 0 0 1px transparent;
 }
 
 .perspective {
-  perspective: 1000px;
+    perspective: 1000px;
 }
