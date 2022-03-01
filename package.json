@@ -21,7 +21,7 @@
     "tailwindcss-pseudo": "^1.0.3",
     "tailwindcss-transforms": "^2.2.0",
     "tailwindcss-transitions": "^2.2.0",
-    "typescript": "^4.5.5"
+    "typescript": "^4.6.2"
   },
   "dependencies": {
     "intersection-observer": "0.12.0",
